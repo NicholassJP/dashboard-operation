@@ -1,0 +1,14 @@
+.border-radius-alfamart {
+  border-radius: 24px 0px 24px 0px;
+}
+
+.bg-gradient-red {
+  background-color: #E02020;
+  background-image: linear-gradient(180deg, #E02020 10%, #980b0b 100%);
+  background-size: cover;
+}
+
+.webkit-center {
+  text-align: -webkit-center;
+}
+
