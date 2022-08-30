@@ -30,3 +30,7 @@
   background-color: #E02020;
 }
 
+.rounded-circle {
+  border-radius: 21% 79% 51% 49% / 30% 30% 70% 70% !important;
+}
+
