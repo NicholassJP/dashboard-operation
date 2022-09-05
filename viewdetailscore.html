@@ -1,244 +1,718 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
     <title>Table - Brand</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
-    <link rel="stylesheet" href="assets/css/Features-Cards-icons.css">
-    <link rel="stylesheet" href="assets/css/untitled.css">
-</head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/fixedheader/3.1.5/css/fixedHeader.bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css" />
+    <link rel="stylesheet" href="assets/css/Features-Cards-icons.css" />
+    <link rel="stylesheet" href="assets/css/untitled.css" />
+  </head>
 
-<body id="page-top">
+  <body id="page-top">
     <div id="wrapper">
-        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-red p-0">
-            <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
-                    <div class="sidebar-brand-icon rotate-n-15"><i class="fa fa-gear"></i></div>
-                    <div class="sidebar-brand-text mx-3"><span style="font-size: 28px;"><strong>OPA</strong><br></span></div>
-                </a>
-                <hr class="sidebar-divider my-0">
-                <ul class="navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item"><a class="nav-link" href="dashboard.html"><i class="fas fa-tachometer-alt" style="font-size: 20px;"></i><span>Dashboard</span></a></li>
-                    <li class="nav-item"></li>
-                    <li class="nav-item"><a class="nav-link" href="viewsummary.html"><i class="far fa-chart-bar" style="font-size: 20px;"></i><span>Report</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="kardus.html"><i class="fas fa-box-open" style="font-size: 16px;"></i><span>Kardus</span></a></li>
-                    <li class="nav-item"></li>
-                </ul>
-                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+      <nav
+        class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-red p-0 toggled"
+      >
+        <div class="container-fluid d-flex flex-column p-0">
+          <a
+            class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0"
+            href="#"
+          >
+            <div class="sidebar-brand-icon rotate-n-15">
+              <i class="fa fa-gear"></i>
             </div>
-        </nav>
-        <div class="d-flex flex-column" id="content-wrapper">
-            <div id="content">
-                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
-                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars text-danger"></i></button>
-                        <ul class="navbar-nav flex-nowrap ms-auto">
-                            <li class="nav-item dropdown no-arrow mx-1">
-                                <div class="shadow dropdown-list dropdown-menu dropdown-menu-end" aria-labelledby="alertsDropdown"></div>
-                            </li>
-                            <div class="d-none d-sm-block topbar-divider"></div>
-                            <li class="nav-item dropdown no-arrow">
-                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="d-block d-lg-inline me-2 text-gray-600 small">Iwan Prayitno</span><img class="border rounded-circle img-profile" src="assets/img/avatars/ProfileMain.png"></a>
-                                    <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a><a class="dropdown-item" href="#"><i class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Activity log</a>
-                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-                <div class="container-fluid">
-                    <h3 class="text-dark mb-4">View Details Score</h3>
-                    <div class="card shadow">
-                        <div class="card-header py-3">
-                            <p class="text-danger m-0 fw-bold">Detail Score BM 1AZ1 - DC PEKANBARU Period December 2021</p>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
-                                <table class="table table-striped table-bordered my-0" id="dataTable">
-                                    <thead>
-                                        <tr>
-                                            <th>Indicator</th>
-                                            <th>Sub Indicator</th>
-                                            <th>Target</th>
-                                            <th>Achv</th>
-                                            <th>% Achv</th>
-                                            <th>Weight Score</th>
-                                            <th>Achv Score</th>
-                                            <th>Score Indicator</th>
-                                            <th>Total Score</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="vertical-align-middle" rowspan="2">EXPANSION</td>
-                                            <td>NET OPENING STORE</td>
-                                            <td>0</td>
-                                            <td>2</td>
-                                            <td class="bg-success" style="--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">101.00%</td>
-                                            <td>3</td>
-                                            <td class="bg-success" style="--bs-danger: #ff9292;--bs-danger-rgb: 255,146,146;--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">3</td>
-                                            <td class="text-center vertical-align-middle" rowspan="2">10</td>
-                                            <td class="text-center vertical-align-middle" rowspan="18">81</td>
-                                        </tr>
-                                        <tr>
-                                            <td>SALES NEW STORE</td>
-                                            <td>6,413,971,713</td>
-                                            <td>7,846,638,656</td>
-                                            <td class="bg-success" style="--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">122.34%</td>
-                                            <td>7</td>
-                                            <td class="bg-success" style="--bs-danger: #ff9292;--bs-danger-rgb: 255,146,146;--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">7</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="vertical-align-middle" rowspan="5">REVENUE</td>
-                                            <td>REVENUE (EXCLUDE SSB)</td>
-                                            <td>0</td>
-                                            <td>2</td>
-                                            <td class="bg-danger" style="--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;--bs-warning-rgb: 255,146,146;--bs-danger: #ff9292;--bs-danger-rgb: 255,146,146;">101.00%</td>
-                                            <td>3</td>
-                                            <td class="bg-success" style="--bs-danger: #ff9292;--bs-danger-rgb: 255,146,146;--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">3</td>
-                                            <td class="text-center vertical-align-middle" rowspan="5">24</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NET SALES</td>
-                                            <td>6,413,971,713</td>
-                                            <td>7,846,638,656</td>
-                                            <td class="bg-danger" style="--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;--bs-warning-rgb: 255,146,146;--bs-danger: #ff9292;--bs-danger-rgb: 255,146,146;">122.34%</td>
-                                            <td>7</td>
-                                            <td class="bg-success" style="--bs-danger: #ff9292;--bs-danger-rgb: 255,146,146;--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">7</td>
-                                        </tr>
-                                        <tr>
-                                            <td>SPD SAME STORE</td>
-                                            <td>6,413,971,713</td>
-                                            <td>7,846,638,656</td>
-                                            <td class="bg-success" style="--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">122.34%</td>
-                                            <td>7</td>
-                                            <td class="bg-success" style="--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">7</td>
-                                        </tr>
-                                        <tr>
-                                            <td>SPD STOREFOCUS</td>
-                                            <td>6,413,971,713</td>
-                                            <td>7,846,638,656</td>
-                                            <td class="bg-success" style="--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">122.34%</td>
-                                            <td>7</td>
-                                            <td class="bg-success" style="--bs-danger: #ff9292;--bs-danger-rgb: 255,146,146;--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">7</td>
-                                        </tr>
-                                        <tr>
-                                            <td>PWP</td>
-                                            <td>6,413,971,713</td>
-                                            <td>7,846,638,656</td>
-                                            <td class="bg-success" style="--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">122.34%</td>
-                                            <td>7</td>
-                                            <td class="bg-danger" style="--bs-danger: #ff9292;--bs-danger-rgb: 255,146,146;--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">7</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="vertical-align-middle" rowspan="2">GROSS MARGIN</td>
-                                            <td>PCT MARGIN</td>
-                                            <td>0</td>
-                                            <td>2</td>
-                                            <td class="bg-success" style="--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">101.00%</td>
-                                            <td>3</td>
-                                            <td class="bg-danger" style="--bs-danger: #ff9292;--bs-danger-rgb: 255,146,146;--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">3</td>
-                                            <td class="text-center vertical-align-middle" rowspan="2">9</td>
-                                        </tr>
-                                        <tr>
-                                            <td>PDM</td>
-                                            <td>6,413,971,713</td>
-                                            <td>7,846,638,656</td>
-                                            <td class="bg-success" style="--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">122.34%</td>
-                                            <td>7</td>
-                                            <td class="bg-success" style="--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">7</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="vertical-align-middle" rowspan="4">INVENTORY</td>
-                                            <td>PRODUCT LOSS</td>
-                                            <td>0</td>
-                                            <td>2</td>
-                                            <td class="bg-success" style="--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">101.00%</td>
-                                            <td>3</td>
-                                            <td class="bg-success" style="--bs-danger: #ff9292;--bs-danger-rgb: 255,146,146;--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">3</td>
-                                            <td class="text-center vertical-align-middle" rowspan="4">3</td>
-                                        </tr>
-                                        <tr>
-                                            <td>BKE</td>
-                                            <td>6,413,971,713</td>
-                                            <td>7,846,638,656</td>
-                                            <td class="bg-success" style="--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">122.34%</td>
-                                            <td>7</td>
-                                            <td class="bg-success" style="--bs-danger: #ff9292;--bs-danger-rgb: 255,146,146;--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">7</td>
-                                        </tr>
-                                        <tr>
-                                            <td>BR</td>
-                                            <td>6,413,971,713</td>
-                                            <td>7,846,638,656</td>
-                                            <td class="bg-success" style="--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">122.34%</td>
-                                            <td>7</td>
-                                            <td class="bg-success" style="--bs-danger: #ff9292;--bs-danger-rgb: 255,146,146;--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">7</td>
-                                        </tr>
-                                        <tr>
-                                            <td>OOS</td>
-                                            <td>6,413,971,713</td>
-                                            <td>7,846,638,656</td>
-                                            <td class="bg-success" style="--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">122.34%</td>
-                                            <td>7</td>
-                                            <td class="bg-success" style="--bs-danger: #ff9292;--bs-danger-rgb: 255,146,146;--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">7</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="vertical-align-middle" rowspan="4">OPEX</td>
-                                            <td>LABOR COST</td>
-                                            <td>0</td>
-                                            <td>2</td>
-                                            <td class="bg-success" style="--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">101.00%</td>
-                                            <td>3</td>
-                                            <td class="bg-success" style="--bs-danger: #ff9292;--bs-danger-rgb: 255,146,146;--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">3</td>
-                                            <td class="text-center vertical-align-middle" rowspan="4">17</td>
-                                        </tr>
-                                        <tr>
-                                            <td>OPEX</td>
-                                            <td>6,413,971,713</td>
-                                            <td>7,846,638,656</td>
-                                            <td class="bg-success" style="--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">122.34%</td>
-                                            <td>7</td>
-                                            <td class="bg-success" style="--bs-danger: #ff9292;--bs-danger-rgb: 255,146,146;--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">7</td>
-                                        </tr>
-                                        <tr>
-                                            <td>LISTRIK</td>
-                                            <td>6,413,971,713</td>
-                                            <td>7,846,638,656</td>
-                                            <td class="bg-success" style="--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">122.34%</td>
-                                            <td>7</td>
-                                            <td class="bg-success" style="--bs-danger: #ff9292;--bs-danger-rgb: 255,146,146;--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">7</td>
-                                        </tr>
-                                        <tr>
-                                            <td>LPT</td>
-                                            <td>6,413,971,713</td>
-                                            <td>7,846,638,656</td>
-                                            <td class="bg-success" style="--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">122.34%</td>
-                                            <td>7</td>
-                                            <td class="bg-success" style="--bs-danger: #ff9292;--bs-danger-rgb: 255,146,146;--bs-success: #92ffb1;--bs-success-rgb: 146,255,177;">7</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="text-center text-xl-end text-xxl-end"></div>
-                        </div>
-                    </div>
-                </div>
+            <div class="sidebar-brand-text mx-3">
+              <span style="font-size: 28px"><strong>OPA</strong><br /></span>
             </div>
-            <footer class="bg-white sticky-footer">
-                <div class="container my-auto">
-                    <div class="text-center my-auto copyright"><span>@ IT Demand</span></div>
-                </div>
-            </footer>
+          </a>
+          <hr class="sidebar-divider my-0" />
+          <ul class="navbar-nav text-light" id="accordionSidebar">
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html"
+                ><i class="fas fa-tachometer-alt" style="font-size: 20px"></i
+                ><span>Dashboard</span></a
+              >
+            </li>
+            <li class="nav-item"></li>
+            <li class="nav-item">
+              <a class="nav-link" href="viewsummary.html"
+                ><i class="far fa-chart-bar" style="font-size: 20px"></i
+                ><span>Report</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kardus.html"
+                ><i class="fas fa-box-open" style="font-size: 16px"></i
+                ><span>Kardus</span></a
+              >
+            </li>
+            <li class="nav-item"></li>
+          </ul>
+          <div class="text-center d-none d-md-inline">
+            <button
+              class="btn rounded-circle border-0"
+              id="sidebarToggle"
+              type="button"
+            ></button>
+          </div>
         </div>
+      </nav>
+      <div class="d-flex flex-column" id="content-wrapper">
+        <div id="content">
+          <nav
+            class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top"
+          >
+            <div class="container-fluid">
+              <button
+                class="btn btn-link d-md-none rounded-circle me-3"
+                id="sidebarToggleTop"
+                type="button"
+              >
+                <i class="fas fa-bars text-danger"></i>
+              </button>
+              <img
+                src="/assets/img/800px-ALFAMART_LOGO_BARU.png"
+                class="img-fluid"
+                width="140"
+                alt=""
+              />
+              <ul class="navbar-nav flex-nowrap ms-auto">
+                <div class="d-none d-sm-block topbar-divider"></div>
+                <li class="nav-item dropdown no-arrow">
+                  <div class="nav-item dropdown no-arrow">
+                    <a
+                      class="dropdown-toggle nav-link"
+                      aria-expanded="false"
+                      data-bs-toggle="dropdown"
+                      href="#"
+                      ><span
+                        class="d-block d-lg-inline me-2 text-gray-600 small"
+                        >Iwan Prayitno</span
+                      ><img
+                        class="border rounded-circle img-profile"
+                        src="assets/img/avatars/ProfileMain.png"
+                    /></a>
+                    <div
+                      class="dropdown-menu shadow dropdown-menu-end animated--grow-in"
+                    >
+                      <a class="dropdown-item" href="#"
+                        ><i
+                          class="fas fa-user fa-sm fa-fw me-2 text-gray-400"
+                        ></i
+                        >&nbsp;Profile</a
+                      ><a class="dropdown-item" href="#"
+                        ><i
+                          class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"
+                        ></i
+                        >&nbsp;Settings</a
+                      ><a class="dropdown-item" href="#"
+                        ><i
+                          class="fas fa-list fa-sm fa-fw me-2 text-gray-400"
+                        ></i
+                        >&nbsp;Activity log</a
+                      >
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="index.html"
+                        ><i
+                          class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"
+                        ></i
+                        >&nbsp;Logout</a
+                      >
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="container-fluid">
+            <h3 class="text-dark mb-4">View Details Score</h3>
+            <div class="card shadow">
+              <div class="card-header py-3">
+                <p class="text-danger m-0 fw-bold">
+                  Detail Score BM 1AZ1 - DC PEKANBARU Period December 2021
+                </p>
+              </div>
+              <div class="card-body">
+                <div
+                  class="table-responsive table mt-2"
+                  id="dataTable"
+                  role="grid"
+                  aria-describedby="dataTable_info"
+                >
+                  <table
+                    class="table table-striped table-bordered my-0"
+                    id="table3"
+                  >
+                    <thead>
+                      <tr>
+                        <th>Indicator</th>
+                        <th>Sub Indicator</th>
+                        <th>Target</th>
+                        <th>Achv</th>
+                        <th>% Achv</th>
+                        <th>Weight Score</th>
+                        <th>Achv Score</th>
+                        <th>Score Indicator</th>
+                        <th>Total Score</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="vertical-align-middle" rowspan="2">
+                          EXPANSION
+                        </td>
+                        <td>NET OPENING STORE</td>
+                        <td>0</td>
+                        <td>2</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          101.00%
+                        </td>
+                        <td>3</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-danger: #ff9292;
+                            --bs-danger-rgb: 255, 146, 146;
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          3
+                        </td>
+                        <td
+                          class="text-center vertical-align-middle"
+                          rowspan="2"
+                        >
+                          10
+                        </td>
+                        <td
+                          class="text-center vertical-align-middle"
+                          rowspan="18"
+                        >
+                          81
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>SALES NEW STORE</td>
+                        <td>6,413,971,713</td>
+                        <td>7,846,638,656</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          122.34%
+                        </td>
+                        <td>7</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-danger: #ff9292;
+                            --bs-danger-rgb: 255, 146, 146;
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          7
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="vertical-align-middle" rowspan="5">
+                          REVENUE
+                        </td>
+                        <td>REVENUE (EXCLUDE SSB)</td>
+                        <td>0</td>
+                        <td>2</td>
+                        <td
+                          class="bg-danger"
+                          style="
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                            --bs-warning-rgb: 255, 146, 146;
+                            --bs-danger: #ff9292;
+                            --bs-danger-rgb: 255, 146, 146;
+                          "
+                        >
+                          101.00%
+                        </td>
+                        <td>3</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-danger: #ff9292;
+                            --bs-danger-rgb: 255, 146, 146;
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          3
+                        </td>
+                        <td
+                          class="text-center vertical-align-middle"
+                          rowspan="5"
+                        >
+                          24
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>NET SALES</td>
+                        <td>6,413,971,713</td>
+                        <td>7,846,638,656</td>
+                        <td
+                          class="bg-danger"
+                          style="
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                            --bs-warning-rgb: 255, 146, 146;
+                            --bs-danger: #ff9292;
+                            --bs-danger-rgb: 255, 146, 146;
+                          "
+                        >
+                          122.34%
+                        </td>
+                        <td>7</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-danger: #ff9292;
+                            --bs-danger-rgb: 255, 146, 146;
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          7
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>SPD SAME STORE</td>
+                        <td>6,413,971,713</td>
+                        <td>7,846,638,656</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          122.34%
+                        </td>
+                        <td>7</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          7
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>SPD STOREFOCUS</td>
+                        <td>6,413,971,713</td>
+                        <td>7,846,638,656</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          122.34%
+                        </td>
+                        <td>7</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-danger: #ff9292;
+                            --bs-danger-rgb: 255, 146, 146;
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          7
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>PWP</td>
+                        <td>6,413,971,713</td>
+                        <td>7,846,638,656</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          122.34%
+                        </td>
+                        <td>7</td>
+                        <td
+                          class="bg-danger"
+                          style="
+                            --bs-danger: #ff9292;
+                            --bs-danger-rgb: 255, 146, 146;
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          7
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="vertical-align-middle" rowspan="2">
+                          GROSS MARGIN
+                        </td>
+                        <td>PCT MARGIN</td>
+                        <td>0</td>
+                        <td>2</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          101.00%
+                        </td>
+                        <td>3</td>
+                        <td
+                          class="bg-danger"
+                          style="
+                            --bs-danger: #ff9292;
+                            --bs-danger-rgb: 255, 146, 146;
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          3
+                        </td>
+                        <td
+                          class="text-center vertical-align-middle"
+                          rowspan="2"
+                        >
+                          9
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>PDM</td>
+                        <td>6,413,971,713</td>
+                        <td>7,846,638,656</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          122.34%
+                        </td>
+                        <td>7</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          7
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="vertical-align-middle" rowspan="4">
+                          INVENTORY
+                        </td>
+                        <td>PRODUCT LOSS</td>
+                        <td>0</td>
+                        <td>2</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          101.00%
+                        </td>
+                        <td>3</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-danger: #ff9292;
+                            --bs-danger-rgb: 255, 146, 146;
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          3
+                        </td>
+                        <td
+                          class="text-center vertical-align-middle"
+                          rowspan="4"
+                        >
+                          3
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>BKE</td>
+                        <td>6,413,971,713</td>
+                        <td>7,846,638,656</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          122.34%
+                        </td>
+                        <td>7</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-danger: #ff9292;
+                            --bs-danger-rgb: 255, 146, 146;
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          7
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>BR</td>
+                        <td>6,413,971,713</td>
+                        <td>7,846,638,656</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          122.34%
+                        </td>
+                        <td>7</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-danger: #ff9292;
+                            --bs-danger-rgb: 255, 146, 146;
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          7
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>OOS</td>
+                        <td>6,413,971,713</td>
+                        <td>7,846,638,656</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          122.34%
+                        </td>
+                        <td>7</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-danger: #ff9292;
+                            --bs-danger-rgb: 255, 146, 146;
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          7
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="vertical-align-middle" rowspan="4">OPEX</td>
+                        <td>LABOR COST</td>
+                        <td>0</td>
+                        <td>2</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          101.00%
+                        </td>
+                        <td>3</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-danger: #ff9292;
+                            --bs-danger-rgb: 255, 146, 146;
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          3
+                        </td>
+                        <td
+                          class="text-center vertical-align-middle"
+                          rowspan="4"
+                        >
+                          17
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>OPEX</td>
+                        <td>6,413,971,713</td>
+                        <td>7,846,638,656</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          122.34%
+                        </td>
+                        <td>7</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-danger: #ff9292;
+                            --bs-danger-rgb: 255, 146, 146;
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          7
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>LISTRIK</td>
+                        <td>6,413,971,713</td>
+                        <td>7,846,638,656</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          122.34%
+                        </td>
+                        <td>7</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-danger: #ff9292;
+                            --bs-danger-rgb: 255, 146, 146;
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          7
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>LPT</td>
+                        <td>6,413,971,713</td>
+                        <td>7,846,638,656</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          122.34%
+                        </td>
+                        <td>7</td>
+                        <td
+                          class="bg-success"
+                          style="
+                            --bs-danger: #ff9292;
+                            --bs-danger-rgb: 255, 146, 146;
+                            --bs-success: #92ffb1;
+                            --bs-success-rgb: 146, 255, 177;
+                          "
+                        >
+                          7
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="text-center text-xl-end text-xxl-end"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="bg-white sticky-footer">
+          <div class="container my-auto">
+            <div class="text-center my-auto copyright">
+              <span>@ IT Demand</span>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.3.1.js"
+    ></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedheader/3.1.5/js/dataTables.fixedHeader.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var table = $("#table3").DataTable({
+          responsive: true,
+        });
+
+        new $.fn.dataTable.FixedHeader(table);
+      });
+    </script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/gaugechart.js"></script>
     <script src="assets/js/theme.js"></script>
-</body>
-
+  </body>
 </html>
