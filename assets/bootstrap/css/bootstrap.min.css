@@ -2900,14 +2900,12 @@ fieldset:disabled .btn {
   border-color: #f6c23e;
 }
 .btn-danger {
-  color: #fff;
-  background-color: #e74a3b;
-  border-color: #e74a3b;
+  color: #f60c0c;
+  background-color: #ffcbcb;
 }
 .btn-danger:hover {
   color: #fff;
   background-color: #c43f32;
-  border-color: #b93b2f;
 }
 .btn-check:focus + .btn-danger,
 .btn-danger:focus {
